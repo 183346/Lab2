@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.spellchecker.controller.SpellCheckerController">
-	<!-- TODO Add Nodes -->
+
+<BorderPane prefHeight="321.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.spellchecker.controller.SpellCheckerController">
+   <top>
+      <Label prefHeight="29.0" prefWidth="99.0" text="Lab2_SpellChecker" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="36.0" prefWidth="306.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="129.0" text="Choose the language :" textAlignment="CENTER" />
+                  <ComboBox fx:id="comboLanguage" prefHeight="45.0" prefWidth="117.0">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <TextArea fx:id="txtInput" prefHeight="166.0" prefWidth="306.0" />
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnSplell" mnemonicParsing="false" onAction="#doSpell" text="Spell Check" />
+               </children>
+            </HBox>
+            <TextFlow fx:id="txtOutput1" prefHeight="200.0" prefWidth="200.0" />
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtMessage" prefHeight="25.0" prefWidth="220.0" />
+                  <Button fx:id="btnClear" mnemonicParsing="false" onAction="#doClear" text="Clear Text" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <TextField fx:id="txtTime" prefHeight="25.0" prefWidth="204.0" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>
